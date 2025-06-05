@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roleta de Prêmios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel@master/Winwheel.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- 🕑 Histórico à Esquerda -->
+    <div class="painel-lateral" id="historico-container" style="border: 2px solid black;">
+      <h3>Últimos Prêmios</h3>
+      <ul id="historico-premios"></ul>
+    </div>
+
+    <!-- 🎯 Roleta Central -->
+    <div class="roleta-container">
+      <div class="seta">▼</div>
+      <canvas id="canvas" width="600" height="600" style="border: 2px solid black;" ></canvas>
+      <img src="Loom.png" alt="Imagem Central" class="imagem-centro" />
+      <button onclick="girar()">Girar</button>
+
+      <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <span id="popup-text"></span>
+          <button onclick="fecharPopup()">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🙌 Mensagem à Direita -->
+    <div class="painel-lateral" id="mensagem-container" style="border: 2px solid black;">
+      <h3 class="titulo-direita">Obrigado por visitar nosso estande!</h3>
+      <div class="balao" >
+        <p class="mensagem">Gire a roleta para descobrir qual brinde você vai ganhar!</p>
+        <div class="seta-balao"></div>
+      </div>
+      <img src="loomCorpo.png" alt="Mascote Lum" class="imagem-loom" />
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
