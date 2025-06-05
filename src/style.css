@@ -17,12 +17,12 @@ body {
 }
 
 .painel-lateral {
+  overflow: hidden;
   background: #ffffffdd;
   border-radius: 12px;
   padding: 20px;
   width: 220px;
   height: 520px;
-  overflow-y: auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   position: relative;
   display: flex;
